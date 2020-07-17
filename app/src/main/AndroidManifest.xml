@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sample.shetkarisahayogfarmer">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DashboardActivities.TransportPaymentActivity"></activity>
+        <activity android:name=".DashboardActivities.IdentityActivity" />
+        <activity android:name=".DashboardActivities.CropPricesActivity" />
+        <activity android:name=".DashboardActivities.MyDealsActivity" />
+        <activity android:name=".DashboardActivities.AggregatorDealsActivity" />
+        <activity android:name=".DashboardActivities.AggregatorActivity" />
+        <activity android:name=".NewUserRegistration.ApplicationIdActivity" />
+        <activity android:name=".NewUserRegistration.BankDetailsActivity" />
+        <activity android:name=".NewUserRegistration.LandDetailsActivity" />
+        <activity android:name=".NewUserRegistration.CommunicationDetailsActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".DashboardActivities.ComplaintActivity" />
+        <activity android:name=".DashboardActivities.UpdateCropsActivity" />
+        <activity android:name=".NewUserRegistration.FarmerDetailsActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+    </application>
+
+</manifest>
