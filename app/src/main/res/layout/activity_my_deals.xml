@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorGray"
+    android:background="@color/colorWhite"
     tools:context=".DashboardActivities.MyDealsActivity">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/imageView_back_deals"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_margin="20dp"
             android:src="@drawable/ic_arrow_back" />
         <TextView
@@ -28,17 +28,17 @@
             android:textColor="@color/colorWhite" />
         <ImageView
             android:id="@+id/imageView_searchAggregator"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_margin="20dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_person_search" />
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_update_inventory"
+        android:id="@+id/recyclerview_myDeals"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp">
+        android:layout_margin="5dp">
     </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

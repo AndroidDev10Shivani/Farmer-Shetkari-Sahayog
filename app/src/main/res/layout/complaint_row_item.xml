@@ -23,7 +23,7 @@
             android:weightSum="2">
 
             <TextView
-                android:id="@+id/aggName"
+                android:id="@+id/complaintFarmerId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
@@ -31,13 +31,13 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/aggId"
+                android:id="@+id/complaintDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.2"
                 android:fontFamily="sans-serif-medium"
                 android:textAlignment="textEnd"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -46,7 +46,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/aggMobileNo"
+                android:id="@+id/complaintAggId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
@@ -56,14 +56,14 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/aggAddress"
+                android:id="@+id/complaintText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:paddingLeft="5dp"
                 android:paddingTop="2dp"
                 android:paddingRight="5dp"
-                android:paddingBottom="5dp"
+                android:paddingBottom="7dp"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>

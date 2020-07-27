@@ -17,85 +17,97 @@
             android:layout_height="30dp"
             android:layout_margin="20dp"
             android:src="@drawable/ic_arrow_back" />
+
         <TextView
             style="@style/Title_TextViewStyle"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="Update Proposed Crops"
+            android:text="Update Goods"
             android:textColor="@color/colorWhite" />
     </RelativeLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="5dp"
         app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <TextView
                     style="@style/TextView_Style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:text="Select crop" />
+                    android:layout_margin="10dp"
+                    android:text="Select yearly proposed farm products"
+                    android:textSize="16sp" />
 
                 <Spinner
                     android:id="@+id/spinner_select_crops"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/spinner_background" />
 
                 <TextView
                     style="@style/TextView_Style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:text="Crop Availability" />
+                    android:layout_margin="10dp"
+                    android:text="Select currently proposed farm product"
+                    android:textSize="16sp" />
 
                 <Spinner
-                    android:id="@+id/spinner_crop_availability"
+                    android:id="@+id/spinner_available_crops"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-            </LinearLayout>
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/spinner_background" />
 
-            <Button
-                android:id="@+id/button_add_material_sort"
-                style="@style/Button_Style"
-                android:layout_width="110dp"
-                android:layout_height="30dp"
-                android:background="@drawable/capsule_green"
-                android:text="Add"
-                android:textColor="@color/colorWhite" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Your currently demanding farm products are :"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/demandedCrops"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="corn, wheat"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button_add_material_sort"
+                    style="@style/Button_Style"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/capsule_green"
+                    android:text="Update"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_update_inventory"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp">
-    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

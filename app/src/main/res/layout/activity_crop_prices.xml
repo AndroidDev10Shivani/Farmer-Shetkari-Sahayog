@@ -11,8 +11,8 @@
 
         <ImageView
             android:id="@+id/imageView_back_prices"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_margin="20dp"
             android:src="@drawable/ic_arrow_back" />
         <TextView
@@ -25,8 +25,8 @@
             android:textColor="@color/colorWhite" />
         <ImageView
             android:id="@+id/imageView_searchAggregator"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_margin="20dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_search" />

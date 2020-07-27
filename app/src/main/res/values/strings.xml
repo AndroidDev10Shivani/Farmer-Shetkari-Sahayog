@@ -2,14 +2,9 @@
     <string name="app_name">Shetkari Sahayog | Farmer</string>
     <string name="new_user"><u>New user Register with us</u></string>
 
-    <string name="application_id_created">Thanks for showing your Interest in our Organization
-        Your Application is in process kindly note Down your Application Id for
-        status of your Application.</string>
-    <string name="application_process">
-        After the receipt of Application Our Supervisor will visit the farmers filed and will check the
-        crops proposed by farmers are actually are in filed or not afterwards his crop condition his
-        yield will be proposed according to area. GPS Location and Photographs will be sent to Office System.
-    </string>
+    <string name="application_id_created">Thanks for showing your interest in Shetkari Sahayog.
+        Your data is successfully saved. kindly note Down your Application Id as your identity code for future use.</string>
+
     <string name="login_title">Farmer</string>
     <string name="app_title">Shetkari Sahayog</string>
 </resources>
