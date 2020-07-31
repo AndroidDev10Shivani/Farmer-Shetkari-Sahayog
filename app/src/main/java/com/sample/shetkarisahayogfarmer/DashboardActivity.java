@@ -37,11 +37,28 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.colorGray));
 
         mobileNumber = getIntent().getStringExtra("mobileNumber");
+
         userName = findViewById(R.id.textView_userName);
         userAppId = findViewById(R.id.textView_userAppID);
 
         userName.setText(getIntent().getStringExtra("name"));
-        userAppId.setText(getIntent().getStringExtra("applicationID"));
+        userAppId.setText(""+getIntent().getLongExtra("applicationID",0));
+
+        FirebaseDatabase.getInstance().getReference("Farmer").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                String name = dataSnapshot.child(mobileNumber).child("name").getValue(String.class);
+                long applicationID = Long.parseLong(dataSnapshot.child(mobileNumber).child("applicationID").getValue().toString());
+                userName.setText(name);
+                userAppId.setText(""+applicationID);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(DashboardActivity.this, "Database issue", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         findViewById(R.id.button_identity).setOnClickListener(this);
         findViewById(R.id.button_logout).setOnClickListener(this);

@@ -61,7 +61,7 @@ public class ComplaintActivity extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull ComplaintViewHolder holder, int position, @NonNull ComplaintHelperClass model) {
                 holder.textViewFarmerId.setText(model.getComplaintMade() + " Id : " + model.getMadeId());
                 holder.textViewDate.setText(model.getDate());
-                holder.textViewAggregatorId.setText("Complaint against " + model.getComplaintAgainst() +" : "+ model.getAgainstId());
+                holder.textViewAggregatorId.setText("Complaint against " + model.getComplaintAgainst() + " : " + model.getAgainstId());
                 holder.textViewComplaintText.setText("Complaint :\n" + model.getComplaint());
             }
 
@@ -79,6 +79,7 @@ public class ComplaintActivity extends AppCompatActivity {
         findViewById(R.id.imageView_back_complaints).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("mobileNumber"+ mobileNumber);
                 startActivity(new Intent(getApplicationContext(), DashboardActivity.class).putExtra("mobileNumber", mobileNumber));
             }
         });
@@ -117,18 +118,14 @@ public class ComplaintActivity extends AppCompatActivity {
         if (!validateComplaint() | !validateComplaintAggId()) {
             //Do nothing
         } else {
-
             FirebaseDatabase.getInstance().getReference("Farmer").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     madeId = Long.parseLong(dataSnapshot.child(mobileNumber).child("applicationID").getValue().toString());
-
                     String complaint = addComplaint.getText().toString();
                     String currentDate = formatter.format(date);
-
                     long againstId = Long.parseLong(complaintAgainst.getText().toString());
-
-                    ComplaintHelperClass helperClass = new ComplaintHelperClass(complaint, currentDate, "Farmer","Aggregator", madeId, againstId);
+                    ComplaintHelperClass helperClass = new ComplaintHelperClass(complaint, currentDate, "Farmer", "Aggregator", madeId, againstId);
                     FirebaseDatabase.getInstance().getReference("Complaints").child(mobileNumber).setValue(helperClass);
 
                     addComplaint.setText(" ");

@@ -87,40 +87,31 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="25sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <EditText
                 android:id="@+id/editText_RegisteredMobileNum"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_margin="10dp"
-                app:boxStrokeColor="@color/colorPrimaryDark"
-                app:hintTextAppearance="@style/login_editText_text">
+                android:background="@drawable/edittext_background"
+                android:hint="Registered Mobile Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Registered Mobile Number"
-                    android:inputType="phone"
-                    android:maxLength="10" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <EditText
+                android:id="@+id/editText_OTP"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_margin="10dp"
-                app:boxStrokeColor="@color/colorPrimaryDark"
-                app:hintTextAppearance="@style/login_editText_text"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/colorPrimaryDark">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_OTP"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Enter OTP as Password"
-                    android:inputType="number" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:background="@drawable/edittext_background"
+                android:hint="Enter OTP"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark" />
 
             <Button
                 android:id="@+id/button_opt"
